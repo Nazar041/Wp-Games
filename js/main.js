@@ -11,7 +11,7 @@ let pipeDown = new Image();
 
 //Добавляем звук в игру
 let fly =  new Audio();
-let score =  new Audio();
+let score_audio =  new Audio();
 
     fly.src = "audio/fly.mp3";
     score.src = "audio/score.mp3";
@@ -34,7 +34,7 @@ function moveUp () {
 }
 
 //Создание блоков
-let pipe [];
+let pipe = [];
 
 pipe[0] = {
     x : cvs.width,
@@ -85,7 +85,7 @@ let grav = 1.5;
         requestAnimationFrame(draw);// Вызов функции постоянно
         
         ctx.fillStyle = "#000";
-        ctx.dont = "20px Arial";
+        ctx.font = "20px Arial";
         ctx.fillText("Счет: " + score, 10, cvs.height - 20);
     }
 
